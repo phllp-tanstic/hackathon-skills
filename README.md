@@ -2,8 +2,11 @@
 
 Private, version-controlled skill library for hackathon ideation, production planning, implementation control, audit, demo readiness, and submission quality.
 
+Start with [`SKILLS_INDEX.md`](./SKILLS_INDEX.md) to route an agent to the correct skill for the current project phase.
+
 ## Current skills
 
+- `skills/project-bootstrap/SKILL.md` — initializes new or existing hackathon repositories with canonical agent instructions, project controls, source-of-truth documents, skill routing, and evidence tracking.
 - `skills/build-right/SKILL.md` — validates the problem, user, differentiation, MVP boundary, proof plan, demand evidence, and demo-first development before a production blueprint is written.
 - `skills/spec-driven-build/SKILL.md` — converts an approved thesis into constitution → specification → plan → tasks → implementation → convergence, with a separate assess → fix → test path for bugs.
 - `skills/blueprint-audit/SKILL.md` — continuously checks blueprint alignment, implementation truth, scope drift, false completeness, mocks/hardcoding, testing, demo readiness, and submission claims.
@@ -11,7 +14,7 @@ Private, version-controlled skill library for hackathon ideation, production pla
 
 ## Working model
 
-**Ideation → Build-Right Gate → Production Blueprint → Spec-Driven Build → Continuous Blueprint Audit → Evidence Audit → Judge/Demo Audit → Submission**
+**Project Bootstrap → Build-Right Gate → Production Blueprint → Spec-Driven Build → Continuous Blueprint Audit → Evidence Audit → Judge/Demo Audit → Submission**
 
 Inside implementation, use:
 
@@ -29,6 +32,8 @@ For material audit claims, use:
 
 This repository is the canonical source of truth for these skills. Improvements discovered during real hackathon projects should be folded back into the relevant skill, template, or example rather than maintained as isolated project-specific instructions.
 
+Project repositories should normally reference these canonical skills through lightweight `AGENTS.md` / `CLAUDE.md` instructions instead of copying the full skill library. If an agent cannot access this private repository, materialize only the required skill and record its canonical source/version.
+
 External methodologies may inform this library, but skills here should be adapted to our hackathon workflow rather than copied wholesale. Preserve attribution and license obligations if source material is ever incorporated directly.
 
 ## Structure
@@ -36,8 +41,11 @@ External methodologies may inform this library, but skills here should be adapte
 ```text
 hackathon-skills/
 ├── README.md
+├── SKILLS_INDEX.md
 ├── CHANGELOG.md
 ├── skills/
+│   ├── project-bootstrap/
+│   │   └── SKILL.md
 │   ├── build-right/
 │   │   └── SKILL.md
 │   ├── spec-driven-build/
